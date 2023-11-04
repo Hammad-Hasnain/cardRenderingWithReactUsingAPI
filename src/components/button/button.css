@@ -1,0 +1,18 @@
+/* =======  BUTTON ======== */
+.buy-btn-div {
+    display: flex;
+    justify-content: end;
+}
+
+.buy-btn-div>button {
+    border: none;
+    background-color: orangered;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.buy-btn-div>button:hover {
+    box-shadow: 0 0 8px #000;
+}

@@ -1,0 +1,50 @@
+.card {
+    border: 2px solid orangered;
+    min-width: 30px;
+    max-width: 350px;
+    border-radius: 7px;
+    padding: 10px;
+    box-shadow: 0px 0px 10px #000;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.img-div {
+    width: 100%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.img-div>img {
+    width: 100%;
+}
+
+.img-div>img:hover {
+    transform: scale(1.2);
+    transition: all 0.5s;
+}
+
+.title-div {
+    border-bottom: 2px solid #808080;
+}
+
+.category-div {
+    text-align: center;
+    font-size: 25px;
+    margin: 12px 0;
+}
+
+.description-div {
+    margin: 10px 0;
+}
+
+@media (max-width:540px) {
+    .card {
+        /* border: 2px solid blue; */
+        max-width: 100%;
+        margin: 0 10px;
+
+    }
+}
