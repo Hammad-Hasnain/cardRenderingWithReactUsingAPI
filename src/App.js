@@ -8,23 +8,33 @@ function App() {
 
   const [apiData, setApiData] = useState([])
   const [isLoading, setIsLoading] = useState(false)
-  const setData = () => {
-    axios.get("https://fakestoreapi.com/products")
-      .then(response => {
-        console.log(response.data)
-        setApiData(response.data)
-        setIsLoading(true)
-      })
-      .catch(error => {
-        console.log("Error =====>", error)
-        setIsLoading(false)
-      })
 
 
+
+
+  const setData = async () => {
+    try {
+      await axios.get("https://fakestoreapi.com/products")
+        .then(response => {
+          console.log(response.data)
+          setApiData(response.data)
+          setIsLoading(true)
+        })
+        .catch(error => {
+          console.log("Error =====>", error)
+          setIsLoading(false)
+        })
+    } catch (error) {
+      console.log('error try catch ', error)
+    }
   }
 
+
+
+
+
   useEffect(() => {
-    console.log("useeffect");
+    // console.log("useeffect");
     setData()
   }, [])
 
